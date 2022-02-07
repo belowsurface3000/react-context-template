@@ -1,4 +1,4 @@
-# Basic React Context Example with useState
+# a Basic React Context Example with useState
 A very basic React app with Context, which now can be used within the components, that are wrapped in the "App.js" Context Provider.
 
 ## Use it by cloning
