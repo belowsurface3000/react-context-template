@@ -45,10 +45,12 @@ const { data, setData } = useContext(exampleContext);
 ```
 console.log(data)
 ```
+a
 before the "return" or by adding 
 ```
 <p>{data}</p>
-```within the "return <div></div>"
+```
+within the "return <div></div>"
 11. to modify the original data (until the page gets refreshed), add a button within the "return <div></div>":
 ```
 <button onClick={() => setData("Hi from Component.js!")}>Change it</button>
