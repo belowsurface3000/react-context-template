@@ -50,7 +50,7 @@ within the return:
 ```
 <p>{data}</p>
 ```
-11. to modify the original data (until the page gets refreshed), add a button within the "return <div></div>":
+11. to modify the original data (until the page gets refreshed), add a button within the "return":
 ```
 <button onClick={() => setData("Hi from Component.js!")}>Change it</button>
 ```
