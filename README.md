@@ -41,16 +41,15 @@ import { exampleContext } from "./App.js";
 ```
 9. within the "function", add this before the "return":
 const { data, setData } = useContext(exampleContext);
-10. you can now access the data from "App.js" inside "Component.js" by writing 
+10. you can now access the data from "App.js" inside "Component.js" by writing this before the return:
 ```
 console.log(data)
 ```
-a
-before the "return" or by adding 
+or by adding this
+within the return:
 ```
 <p>{data}</p>
 ```
-within the "return <div></div>"
 11. to modify the original data (until the page gets refreshed), add a button within the "return <div></div>":
 ```
 <button onClick={() => setData("Hi from Component.js!")}>Change it</button>
