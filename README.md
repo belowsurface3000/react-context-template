@@ -12,10 +12,10 @@ A very basic React app with Context, which now can be used within the components
 ## Recreate it by yourself
 1. start a new React project with creating a new folder
 2. $ cd FOLDERNAME
-2. $ create-react-app .
-3. $ npm start
-4. optional: delete content which is not needed (.css files, jsx content, logo, etc.)
-5. open "App.js" and add this before the "function":
+3. $ create-react-app .
+4. $ npm start
+5. optional: delete content which is not needed (.css files, jsx content, logo, etc.)
+6. open "App.js" and add this before the "function":
 ```
 import { createContext, useState } from "react";
 import Component from './Component';
@@ -24,24 +24,24 @@ export const exampleContext = createContext({
   setData: () => {}
 });
 ```
-6. within the "function", add these before the "return":
+7. within the "function", add these before the "return":
 ```
 const [ data, setData ] = useState("Hi from App.js!");
 const contextValue = { data, setData };
 ```
-7. within the "return", wrap everything with:
+8. within the "return", wrap everything with:
 ```
 <exampleContext.Provider value={contextValue}>
 </exampleContext.Provider>
 ```
-8. within the "Component.js" file add this before the "function"
+9. within the "Component.js" file add this before the "function"
 ```
 import { useContext } from "react";
 import { exampleContext } from "./App.js";
 ```
-9. within the "function", add this before the "return":
+10. within the "function", add this before the "return":
 const { data, setData } = useContext(exampleContext);
-10. you can now access the data from "App.js" inside "Component.js" by writing this before the return:
+11. you can now access the data from "App.js" inside "Component.js" by writing this before the return:
 ```
 console.log(data)
 ```
@@ -50,7 +50,7 @@ within the return:
 ```
 <p>{data}</p>
 ```
-11. to modify the original data (until the page gets refreshed), add a button within the "return":
+12. to modify the original data (until the page gets refreshed), add a button within the "return":
 ```
 <button onClick={() => setData("Hi from Component.js!")}>Change it</button>
 ```
